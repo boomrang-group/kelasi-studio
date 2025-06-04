@@ -1,0 +1,207 @@
+/* AI Document Assistant Modal Styles - Can be similar to AIAssistantModal.css */
+.ai-doc-assistant-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1010; /* Ensure it's on top if both modals could ever be open */
+}
+
+.ai-doc-assistant-modal {
+  background-color: var(--surface-color);
+  padding: 1.5rem 2rem;
+  border-radius: var(--default-border-radius); /* Standardized radius */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--light-gray); /* Use light-gray */
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.doc-modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color); /* Global text color */
+}
+
+.doc-close-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-muted-color); /* Muted color */
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+}
+.doc-close-button:hover {
+  color: var(--dark-gray); /* Darker on hover */
+}
+
+.doc-modal-content {
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.document-context {
+  font-size: 0.95rem;
+  color: var(--text-muted-color);
+  margin-bottom: 1rem;
+  background-color: var(--background-color); /* Use global background */
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--light-gray); /* Use light-gray */
+}
+
+.document-title-display {
+  font-weight: bold;
+  color: var(--info-color); /* Use info color for document title */
+}
+
+.doc-input-group {
+  margin-bottom: 1.25rem;
+}
+
+.doc-input-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.35rem;
+}
+
+.summary-textarea {
+  width: 100%;
+  /* Uses global input styles from index.css if not overridden */
+  /* padding: 0.75rem; */
+  /* border: 1px solid var(--light-gray); */
+  /* border-radius: var(--default-border-radius); */
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 80px;
+}
+/* Focus state is handled by global input styles in index.css */
+
+
+.doc-generate-button {
+  background-color: var(--info-color); /* Use info color */
+  color: var(--surface-color); /* White text */
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: var(--default-border-radius);
+  font-size: 1rem;
+  /* cursor: pointer; from global */
+  /* transition: background-color 0.3s; from global */
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.doc-generate-button:hover {
+  background-color: #138496; /* Darken info color */
+}
+
+.doc-generate-button:disabled {
+  background-color: var(--secondary-color); /* Use secondary for disabled */
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.doc-generated-content {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--light-gray); /* Use light-gray */
+  padding-top: 1rem;
+}
+
+.doc-generated-item {
+  margin-bottom: 1.5rem; /* Increased margin */
+}
+
+.doc-generated-item label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color); /* Use primary color for these labels */
+  margin-bottom: 0.5rem;
+}
+
+.doc-content-display-area {
+  background-color: var(--background-color); /* Use global background */
+  padding: 0.75rem 1rem;
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--light-gray); /* Use light-gray */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.doc-content-display-area ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  flex-grow: 1;
+  color: var(--text-color); /* Global text color */
+  font-size: 0.95rem;
+}
+.doc-content-display-area ul li {
+  margin-bottom: 0.35rem;
+}
+
+
+.doc-copy-button {
+  background-color: var(--secondary-color);
+  color: var(--surface-color); /* White text */
+  padding: 0.35rem 0.75rem;
+  border: none;
+  border-radius: var(--default-border-radius);
+  font-size: 0.8rem;
+  /* cursor: pointer; from global */
+  /* transition: background-color 0.3s; from global */
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.doc-copy-button:hover {
+  background-color: var(--dark-gray); /* Darken secondary */
+}
+
+.doc-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--light-gray); /* Use light-gray */
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+.doc-modal-footer button {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--default-border-radius);
+  font-size: 0.95rem;
+  /* cursor: pointer; from global */
+  /* transition: ...; from global */
+  margin-left: 0.75rem;
+}
+
+.doc-cancel-button {
+  background-color: var(--surface-color); /* Surface for cancel */
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color); /* Secondary border */
+}
+.doc-cancel-button:hover {
+  background-color: var(--light-gray); /* Light gray on hover */
+}

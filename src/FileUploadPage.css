@@ -1,0 +1,159 @@
+.file-upload-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--background-color); /* Use global background */
+}
+
+.upload-title {
+  font-size: 2rem;
+  color: var(--text-color); /* Use global text color */
+  margin-bottom: 2rem;
+}
+
+.dropzone {
+  border: 3px dashed var(--primary-color); /* Use primary color for border */
+  border-radius: var(--default-border-radius); /* Standardized radius */
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  background-color: var(--surface-color); /* Use surface color */
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Softer shadow */
+}
+
+.dropzone.dragging {
+  background-color: var(--light-gray); /* Use light-gray for dragging bg */
+  border-color: var(--primary-color); /* Darken primary or use a variant */
+}
+
+.file-input-hidden {
+  display: none;
+}
+
+.file-input-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-input-label p {
+  margin: 0.5rem 0;
+  color: var(--text-muted-color); /* Muted text for placeholder */
+}
+
+.browse-button {
+  background-color: var(--primary-color);
+  color: var(--surface-color); /* White text */
+  padding: 0.75rem 1.5rem;
+  border: none; /* Already set by global button styles if used */
+  border-radius: var(--default-border-radius);
+  font-size: 1rem;
+  /* cursor: pointer; already global */
+  /* transition: background-color 0.3s; already global */
+  margin-top: 0.5rem;
+}
+
+.browse-button:hover {
+  background-color: #0069d9; /* Darken primary, or use a variable if defined */
+}
+
+.supported-formats {
+  font-size: 0.9rem;
+  color: var(--text-muted-color);
+  margin-top: 1.5rem;
+}
+
+.file-progress-area {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+  background-color: var(--surface-color); /* Use surface color */
+  padding: 1.5rem;
+  border-radius: var(--default-border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Softer shadow */
+}
+
+.progress-title {
+  font-size: 1.25rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--light-gray); /* Use light-gray for border */
+}
+
+.file-item:last-child {
+  border-bottom: none;
+}
+
+.file-name {
+  font-size: 0.95rem;
+  color: var(--text-color); /* Use text-color */
+  flex-grow: 1;
+  margin-right: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.progress-bar-container {
+  width: 150px;
+  height: 20px;
+  background-color: var(--light-gray); /* Use light-gray */
+  border-radius: var(--default-border-radius);
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--success-color); /* Use success color */
+  color: var(--surface-color); /* White text */
+  font-size: 0.75rem;
+  line-height: 20px;
+  text-align: center;
+  transition: width 0.3s ease-in-out;
+}
+
+.upload-action-button {
+  background-color: var(--info-color); /* Use info color */
+  color: var(--surface-color); /* White text */
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: var(--default-border-radius);
+  font-size: 0.8rem;
+  min-width: 70px;
+}
+
+.upload-action-button:hover {
+  background-color: #138496; /* Darken info color, or use a variable */
+}
+
+.upload-status {
+  font-size: 0.85rem;
+  color: var(--text-muted-color); /* Use muted text color */
+  min-width: 70px;
+  text-align: right;
+}
+.upload-status.completed {
+  color: var(--success-color); /* Use success color */
+  font-weight: bold;
+}
