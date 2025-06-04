@@ -1,0 +1,36 @@
+.media-library-page {
+  padding: 1.5rem; /* Adjusted padding, or use var if defined */
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color); /* Global background */
+}
+
+.library-title {
+  font-size: 2rem;
+  color: var(--text-color); /* Global text color */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+
+/* Styles for when the library is empty */
+.empty-library-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-muted-color); /* Muted text color */
+  margin-top: 3rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

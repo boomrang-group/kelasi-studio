@@ -1,0 +1,110 @@
+.recording-page {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; /* Keep padding as is or use var if defined for specific component padding */
+  height: 100%;
+}
+
+.recording-type-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem; /* Increased margin */
+  background-color: var(--surface-color); /* Use surface color */
+  padding: 0.75rem; /* Increased padding */
+  border-radius: var(--default-border-radius);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+}
+
+.recording-type-selector button {
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border: 1px solid var(--light-gray); /* Use light-gray for border */
+  border-radius: var(--default-border-radius);
+  background-color: var(--background-color); /* Use background for non-active */
+  color: var(--text-color);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.recording-type-selector button:hover {
+  background-color: var(--light-gray);
+  border-color: var(--secondary-color);
+}
+
+.recording-type-selector button.active {
+  background-color: var(--primary-color);
+  color: var(--surface-color); /* White text on primary */
+  border-color: var(--primary-color);
+}
+
+.recording-interface {
+  display: flex;
+  flex-grow: 1;
+  border: 1px solid var(--light-gray); /* Use light-gray */
+  border-radius: var(--default-border-radius);
+  overflow: hidden;
+  background-color: var(--surface-color); /* Add surface color */
+}
+
+.preview-area {
+  flex-grow: 1;
+  background-color: var(--background-color); /* Slightly different from surface */
+  padding: 1.5rem; /* Increased padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--light-gray); /* Use light-gray */
+  min-height: 300px;
+}
+
+.controls-area {
+  width: 220px; /* Slightly wider */
+  padding: 1.5rem; /* Increased padding */
+  background-color: var(--surface-color); /* Match interface bg */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid var(--light-gray); /* Add border if preview has different bg */
+}
+
+.controls-area button {
+  background-color: var(--secondary-color);
+  color: var(--surface-color); /* White text */
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: var(--default-border-radius);
+  margin-bottom: 1rem; /* Increased margin */
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+
+.controls-area button:hover {
+  background-color: var(--dark-gray); /* Use dark-gray for hover */
+}
+.controls-area button:disabled {
+  background-color: var(--light-gray);
+  color: var(--text-muted-color);
+  cursor: not-allowed;
+}
+
+
+/* Placeholder styling */
+.recorder-placeholder {
+  padding: 1.5rem; /* Increased padding */
+  border: 2px dashed var(--secondary-color); /* Use secondary for dashed border */
+  border-radius: var(--default-border-radius);
+  text-align: center;
+  font-style: italic;
+  color: var(--text-muted-color); /* Use muted text color */
+  background-color: var(--light-gray); /* Use light-gray for placeholder bg */
+  width: 80%;
+  max-width: 600px;
+}
+
+.webcam-recorder { border-color: var(--primary-color); }
+.screen-recorder { border-color: var(--success-color); }
+.audio-recorder { border-color: var(--warning-color); }
+.combined-recorder { border-color: var(--info-color); }

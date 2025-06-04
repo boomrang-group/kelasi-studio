@@ -1,0 +1,220 @@
+.ai-assistant-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.ai-assistant-modal {
+  background-color: var(--surface-color);
+  padding: 1.5rem 2rem;
+  border-radius: var(--default-border-radius); /* Standardized radius */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh; /* Max height */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--light-gray); /* Use light-gray */
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color); /* Global text color */
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-muted-color); /* Muted color */
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+}
+.close-button:hover {
+  color: var(--dark-gray); /* Darker on hover */
+}
+
+.modal-content {
+  overflow-y: auto; /* Allow content to scroll if needed */
+  padding-right: 0.5rem; /* Space for scrollbar */
+  margin-bottom: 1.5rem;
+}
+
+.media-context {
+  font-size: 0.95rem;
+  color: var(--text-muted-color);
+  margin-bottom: 1rem;
+  background-color: var(--background-color); /* Use global background */
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--light-gray); /* Use light-gray */
+}
+
+.media-title-display {
+  font-weight: bold;
+  color: var(--primary-color); /* Use primary color */
+}
+
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.35rem;
+}
+
+.keyword-input {
+  width: 100%;
+  /* Uses global input styles from index.css if not overridden */
+  /* padding: 0.75rem; */
+  /* border: 1px solid var(--light-gray); */
+  /* border-radius: var(--default-border-radius); */
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+/* Focus state is handled by global input styles in index.css */
+
+.generate-button {
+  background-color: var(--primary-color);
+  color: var(--surface-color); /* White text */
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: var(--default-border-radius);
+  font-size: 1rem;
+  /* cursor: pointer; from global */
+  /* transition: background-color 0.3s; from global */
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.generate-button:hover {
+  background-color: #0069d9; /* Darken primary */
+}
+
+.generate-button:disabled {
+  background-color: var(--secondary-color); /* Use secondary for disabled */
+  opacity: 0.65; /* Standard opacity for disabled */
+  cursor: not-allowed;
+}
+
+.generated-content {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--light-gray); /* Use light-gray */
+  padding-top: 1rem;
+}
+
+.generated-item {
+  margin-bottom: 1.25rem;
+}
+
+.generated-item label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--success-color); /* Use success color */
+  margin-bottom: 0.35rem;
+}
+
+.content-display-area {
+  background-color: var(--background-color); /* Use global background */
+  padding: 0.75rem;
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--light-gray); /* Use light-gray */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content-display-area p {
+  margin: 0;
+  flex-grow: 1;
+  color: var(--text-color); /* Global text color */
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.content-display-area p.description-text {
+  max-height: 100px; /* Limit description preview height */
+  overflow-y: auto;
+}
+
+.copy-button {
+  background-color: var(--secondary-color);
+  color: var(--surface-color); /* White text */
+  padding: 0.35rem 0.75rem;
+  border: none;
+  border-radius: var(--default-border-radius);
+  font-size: 0.8rem;
+  /* cursor: pointer; from global */
+  /* transition: background-color 0.3s; from global */
+  margin-left: 0.75rem;
+  flex-shrink: 0;
+}
+
+.copy-button:hover {
+  background-color: var(--dark-gray); /* Darken secondary */
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--light-gray); /* Use light-gray */
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+.modal-footer button {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--default-border-radius);
+  font-size: 0.95rem;
+  /* cursor: pointer; from global */
+  /* transition: ...; from global */
+  margin-left: 0.75rem;
+}
+
+.apply-button {
+  background-color: var(--success-color);
+  color: var(--surface-color); /* White text */
+  border: 1px solid var(--success-color);
+}
+.apply-button:hover {
+  background-color: #1e7e34; /* Darken success */
+  border-color: #1c7430;
+}
+.apply-button:disabled {
+  background-color: var(--light-gray); /* Use light-gray for disabled */
+  color: var(--text-muted-color);
+  border-color: var(--light-gray);
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background-color: var(--surface-color); /* Surface color for cancel */
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color); /* Secondary border */
+}
+.cancel-button:hover {
+  background-color: var(--light-gray); /* Light gray on hover */
+}

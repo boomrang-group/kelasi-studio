@@ -1,0 +1,47 @@
+header {
+  background-color: var(--surface-color);
+  padding: 1rem 1.5rem; /* Adjusted padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--light-gray); /* Add a subtle border */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Add a subtle shadow */
+}
+
+header h1 {
+  margin: 0;
+  color: var(--primary-color); /* Use primary color for title */
+  font-size: 1.75rem;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 1.5rem; /* Adjusted margin */
+}
+header nav ul li a { /* Style links for better appearance */
+  text-decoration: none;
+  color: var(--text-muted-color);
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--default-border-radius);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: var(--primary-color);
+  background-color: var(--light-gray);
+}
+
+
+main {
+  padding: 1.5rem; /* Adjusted padding */
+  flex-grow: 1; /* Ensure main content can grow */
+  display: flex; /* Added for future centering of content if needed */
+  flex-direction: column; /* Added for future centering of content if needed */
+}
